@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poppins with Gradient Background</title>
+  <style>
+    /* Import Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+
+    body {
+      font-family: 'Noto Serif JP', serif;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+
+      /* Gradient Animation */
+      background: linear-gradient(270deg, #FB5D7D, #6A82FC, #5AFF15, #FFB347);
+      background-size: 800% 800%;
+      animation: gradientAnimation 15s ease infinite;
+      transition: background 0.5s;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 50% 50%; }
+      50% { background-position: 100% 50%; }
+      75% { background-position: 50% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+   .join-btn {
+     background: linear-gradient(270deg, #FB5D7D, #6A82FC, #5AFF15, #FFB347);
+      background-size: 800% 800%;
+      animation: gradientAnimation 15s ease infinite;
+      transition: background 0.5s;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+ @keyframes join-btn {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 50% 50%; }
+      50% { background-position: 100% 50%; }
+      75% { background-position: 50% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+.join-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+  </style>
+</head>
+<body>
+  <h1>你好，先生/女士</h1>
+  <p>仍在工作，页面将在先生批准后准备就绪</p>
+  <p> 現在您可以繼續使用本網站。</p>
+ <a href="https://admissions.nic.in/JEECUP/Applicant/root/Home.aspx?enc=89xw0ctRCXfaXHy3CACizC/iTtGlQ2gr3PqkYz7lYP3WNix3RnTHPpSWAVqmrvvIVaUuzkP4uhCBnw6Q3jPegg==" class="join-btn">加入</a>
+</body>
+</html>

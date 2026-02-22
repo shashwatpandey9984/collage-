@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SC/ST Committee - GPCS</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+
+    body {
+      background: linear-gradient(135deg, #FF6A88, #6A82FB);
+      color: #fff;
+      line-height: 1.6;
+      padding: 20px;
+    font-family: 'Shadows Into Light', cursive;
+
+    }
+
+    /* Heading */
+    main h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fffacd;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+     font-family: 'Shadows Into Light', cursive;
+
+    }
+
+    /* Grid */
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Card */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #fffacd;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #fffacd;
+    }
+
+    .role {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .president { background: #FF6347; } /* Tomato */
+    .member { background: #1E90FF; } /* DodgerBlue */
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      background: rgba(0,0,0,0.3);
+      color: #fffacd;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      border-top: 3px solid #fffacd;
+    }
+
+    .footer strong {
+      color: #FFD700;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .committee-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+      }
+      main h2 { font-size: 1.8rem; }
+      .card img { width: 90px; height: 90px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>SC/ST Committee</h2>
+    <div class="committee-grid">
+
+      <div class="card">
+        <img src="PINKI YADAV Lecturer Electronics.jpeg" alt="Mrs Pinki Yadav">
+        <h3>Mrs Pinki Yadav</h3>
+        <span class="role president">President</span>
+      </div>
+
+      <div class="card">
+        <img src="Vivek Srivastava.jpg" alt="Dr Vivek Srivastava">
+        <h3>Dr Vivek Srivastava</h3>
+        <span class="role member">Member</span>
+      </div>
+
+      <div class="card">
+        <img src="Neeraj Dubey.jpeg" alt="Mr Neeraj Dubey">
+        <h3>Mr Neeraj Dubey</h3>
+        <span class="role member">Member</span>
+      </div>
+
+      <div class="card">
+        <img src="subash.jpeg" alt="Mr Subash Kumar Gautam">
+        <h3>Mr Subash Kumar Gautam</h3>
+        <span class="role member">Member</span>
+      </div>
+
+      <div class="card">
+        <img src="Arun Kushwaha Lecturer (Electronics Engineering ).jpeg" alt="Mr Arun Kumar Chandra">
+        <h3>Mr Arun Kumar Chandra</h3>
+        <span class="role member">Member</span>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 ALL RIGHTS RESERVED GOVT. POLYTECHNIC CHOPAN, SONBHADRA</p>
+    <p>(Maintained By <strong>Dr. Vivek Srivastava and Students</strong> — Computer Science and Engineering)</p>
+  </footer>
+</body>
+</html>

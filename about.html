@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Govt. Polytechnic Chopan</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <video autoplay muted loop playsinline id="loadingVideo">
+      <source src="loading screen.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>乔潘政府理工学院</h1>
+      <p>自 2016 年起通过技术教育赋能青年</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+“Established in 2016, <strong>Government Polytechnic Chopan, Sonbhadra</strong> has rapidly grown into one of the most respected polytechnic institutes in Uttar Pradesh. The institute operates under the <strong>Directorate of Technical Education, Lucknow</strong>, aiming to equip young students with modern technical skills and enable them to make meaningful contributions to India’s development.”
+    </p>
+  </section>
+
+  <!-- Programs Section -->
+  <section class="programs">
+    <h2>Our Diploma Programs</h2>
+    <div class="program-cards">
+      <div class="card">
+        <h3>💻 计算机科学与工程</h3>
+        <p>Focus on programming, software development and networking. Prepare students for careers in IT companies, start-ups and digital innovation.。</p>
+      </div>
+      <div class="card">
+        <h3>⚡电子工程</h3>
+        <p>Covers circuits, communication systems, and embedded technologies. Ideal for careers in telecommunications, automation, and electronics.</p>
+      </div>
+      <div class="card">
+        <h3>🚗 汽车工程</h3>
+        <p>Focusing on automotive design, engine and electric vehicle technologies, we train future engineers for India's rapidly growing automotive industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Initiatives -->
+  <section class="highlight">
+    <h2>超越学术</h2>
+    <p>
+      We promote inclusive, skills-based learning and industry experience through workshops, seminars and visits. In partnership with Skill India, we help students become not only job-ready but also entrepreneurial and innovative.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Government Polytechnic Chopan, Sonbhadra</p>
+    <p>Maintained By <b>Dr. Vivek Srivastava & Students (CSE)</b></p>
+  </footer>
+
+  <script>
+    // Loader fade-out
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.classList.add("fade-out");
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll("section, .card");
+    window.addEventListener("scroll", () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      revealElements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) el.classList.add("show");
+      });
+    });
+  </script>
+</body>
+</html>

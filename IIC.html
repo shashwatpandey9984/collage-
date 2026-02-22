@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal Complaint Committee - GPCS</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+</style>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   
+body {
+  background: linear-gradient(135deg, #FB5D7D, #6A82FC);
+  color: white;
+  line-height: 1.6;
+  padding: 20px;
+    font-family: 'Story Script', cursive;
+} 
+
+    main h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #003366;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-family: 'Libertinus Keyboard', monospace;
+    }
+
+    /* Grid */
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Card */
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      padding: 25px 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #003366;
+    }
+
+    /* Names and roles */
+    .card h3 {
+      font-size: 1.2rem;
+      color: #003366;
+      margin-bottom: 8px;
+    }
+    .role {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: white;
+    }
+    .president { background: #003366; }
+    .member { background: #0077c2; }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      background: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      border-top: 5px solid #0066cc;
+    }
+    .footer strong {
+      color: #ffd700;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .committee-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+      }
+      main h2 { font-size: 1.8rem; }
+      .card img { width: 90px; height: 90px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>Internal Complaint Committee</h2>
+
+    <div class="committee-grid">
+      <div class="card">
+        <img src="Principal.jpg" alt="Mr. Brijendra Singh">
+        <h3>Mr. Brijendra Singh</h3>
+        <span class="role president">President</span>
+      </div>
+
+      <div class="card">
+        <img src="PINKI YADAV Lecturer Electronics.jpeg" alt="Mrs. Pinki Yadav">
+        <h3>Mrs. Pinki Yadav</h3>
+        <span class="role member">Member</span>
+      </div>
+
+      <div class="card">
+        <img src="Abhishek kumar Vishwakarma Automobile.jpeg" alt="Mr. Abhishek Kumar Vishwakarma">
+        <h3>Mr. Abhishek Kumar Vishwakarma</h3>
+        <span class="role member">Member</span>
+      </div>
+
+      <div class="card">
+        <img src="laxmi.jpeg" alt="Mr. Laxmi Shankar Yadav">
+        <h3>Mr. Laxmi Shankar Yadav</h3>
+        <span class="role member">Member</span>
+      </div>
+
+      <div class="card">
+        <img src="Neeraj Dubey.jpeg" alt="Mr. Neeraj Dubey">
+        <h3>Mr. Neeraj Dubey</h3>
+        <span class="role member">Member</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 ALL RIGHTS RESERVED GOVT. POLYTECHNIC CHOPAN, SONBHADRA</p>
+    <p>(Maintained By <strong>Dr. Vivek Srivastava and Students</strong> — Computer Science and Engineering)</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science - GPCS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #2c2f83;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header img { height: 60px; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.1rem; max-width: 800px; margin: auto; line-height: 1.6; }
+    .btn-apply {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ffdf6c;
+      color: #4e54c8;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-apply:hover { background: #e6c85f; }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover { transform: scale(1.05); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed;
+      top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; }
+
+    /* Teachers */
+    .teachers {
+      padding: 40px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    .teachers h2 { margin-bottom: 30px; color: #2c2f83; }
+    .teacher-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .teacher {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .teacher-inner {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .teacher:hover .teacher-inner { transform: rotateY(180deg); }
+    .teacher-front, .teacher-back {
+      position: absolute;
+      width: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+    }
+    .teacher-front img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .teacher-front h3 { margin: 10px 0 5px; color: #333; }
+    .teacher-front p { color: #555; font-size: 0.95rem; }
+
+    .teacher-back {
+      background: #2c2f83;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .teacher-back h3 { margin-bottom: 10px; }
+    .teacher-back p { font-size: 0.95rem; }
+
+    /* Footer */
+   .footer {
+  background: #1f2266;
+  color: white;
+  padding: 25px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left h3 {
+  margin-bottom: 10px;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.footer-right {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="LOGO5.png" alt="GPCS Logo">
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="photo.html">Photo Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Index.html">Courses</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Computer Science and Engineering</h1>
+    <p>
+      The Diploma in Computer Science and Engineering is a 3-year full-time program covering
+      computation, automation, data science, algorithms, database systems, theory of computation,
+      and software design. Eligible candidates must have passed 10th or higher. Admission is
+      based on the JEECUP entrance exam.
+    </p>
+    <a href="apply.html" class="btn-apply">Apply Now</a>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <img src="CSE1.jpeg" alt="Lab 1">
+    <img src="CSE2.jpeg" alt="Lab 2">
+    <img src="CSE3.jpeg" alt="Lab 3">
+    <img src="CSE4.jpeg" alt="Lab 4">
+    <img src="CSE5.jpeg" alt="Lab 5">
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox"><img src="" alt="Enlarged Image"></div>
+
+  <!-- Teachers -->
+  <section class="teachers">
+    <h2>Our Faculty</h2>
+    <div class="teacher-cards">
+      <div class="teacher">
+        <div class="teacher-inner">
+          <div class="teacher-front">
+            <img src="Vivek Srivastava.jpg" alt="Dr. Vivek Srivastava">
+            <h3>Dr. Vivek Srivastava</h3>
+            <p>Officiating HOD<br>B.Tech, M.Tech, PhD<br>Computer Science & Engineering</p>
+          </div>
+          <div class="teacher-back">
+            <h3>Contact</h3>
+            <p>Email: vivek@gpcs.ac.in</p>
+            <p>Phone: +91 1357924680</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="teacher">
+        <div class="teacher-inner">
+          <div class="teacher-front">
+            <img src="Neeraj Dubey.jpeg" alt="Mr. Neeraj Dubey">
+            <h3>Mr. Neeraj Dubey</h3>
+            <p>B.Tech, M.Tech<br>Computer Science & Engineering</p>
+          </div>
+          <div class="teacher-back">
+            <h3>Contact</h3>
+            <p>Email: neeraj@gpcs.ac.in</p>
+            <p>Phone: +91 0987654321</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="teacher">
+        <div class="teacher-inner">
+          <div class="teacher-front">
+            <img src="rizwan ahmad computer science.jpeg" alt="Mr. Rizwan Ahmad">
+            <h3>Mr. Rizwan Ahmad</h3>
+            <p>B.Tech<br>Computer Science & Engineering</p>
+          </div>
+          <div class="teacher-back">
+            <h3>Contact</h3>
+            <p>Email: rizwan@gpcs.ac.in</p>
+            <p>Phone: +91 1234567890</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Government Polytechnic Chopan</h3>
+      <p>Sonbhadra, Uttar Pradesh</p>
+      <p>Computer Science and Engineering Department</p>
+    </div>
+
+    <div class="footer-right">
+      <p>© 2025 All Rights Reserved</p>
+      <p>Maintained by <strong>Dr. Vivek Srivastava & Students</strong></p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script>
+    // Gallery lightbox (independent, won't conflict with script.js)
+    const galleryImages = document.querySelectorAll(".gallery img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  </script>
+</body>
+</html>
